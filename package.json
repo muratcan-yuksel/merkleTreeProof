@@ -1,0 +1,22 @@
+{
+  "name": "merkle-tree-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "fs": "^0.0.1-security",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.3.11"
+  }
+}
