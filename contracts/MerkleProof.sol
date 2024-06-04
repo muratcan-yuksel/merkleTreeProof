@@ -29,7 +29,7 @@ contract MerkleProofContract {
 
     function onlyWhitelisted(
         bytes32[] calldata proof
-    ) public view isWhitelistedAddress(proof) returns (bool) {
-        return true;
+    ) public view isWhitelistedAddress(proof) returns (uint8) {
+        return 5;
     }
 }
