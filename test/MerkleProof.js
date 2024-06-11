@@ -21,10 +21,6 @@ describe("MerkleProof", function () {
     //   await setup();
     // });
 
-    async function callOnlyWhitelisted(_user, _proof) {
-      await merkleTreeContract.connect(_user).onlyWhitelisted(_proof);
-    }
-
     const user = addr1;
 
     const proof = [
@@ -35,7 +31,9 @@ describe("MerkleProof", function () {
     console.log(
       `user address: ${user.address} and proof: ${proof} and rootHash: ${rootHash}`
     );
-    await callOnlyWhitelisted(user, proof);
-    // expect(await callOnlyWhitelisted(user, proof)).to.be.equal(true);
+
+    expect(
+      await merkleTreeContract.connect(user).onlyWhitelisted(proof)
+    ).to.equal(5);
   });
 });
